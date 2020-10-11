@@ -1,12 +1,12 @@
 <?php
 
-namespace Qanoune\Plans\Traits;
+namespace BezhanSalleh\LaravelPlans\Traits;
 
 use Carbon\Carbon;
 use Stripe\Stripe;
 use Stripe\Charge as StripeCharge;
 use Stripe\Customer as StripeCustomer;
-use Qanoune\Plans\Helpers\StripeHelper;
+use BezhanSalleh\LaravelPlans\Helpers\StripeHelper;
 
 trait CanPayWithStripe
 {
@@ -192,9 +192,9 @@ trait CanPayWithStripe
                     'expires_on' => Carbon::now()->addDays($lastDueSubscription->recurring_each_days),
                 ]);
 
-                event(new \Qanoune\Plans\Events\Stripe\DueSubscriptionChargeSuccess($this, $lastDueSubscription, $stripeCharge));
+                event(new \BezhanSalleh\LaravelPlans\Events\Stripe\DueSubscriptionChargeSuccess($this, $lastDueSubscription, $stripeCharge));
             } catch (\Exception $exception) {
-                event(new \Qanoune\Plans\Events\Stripe\DueSubscriptionChargeFailed($this, $lastDueSubscription, $exception));
+                event(new \BezhanSalleh\LaravelPlans\Events\Stripe\DueSubscriptionChargeFailed($this, $lastDueSubscription, $exception));
 
                 return false;
             }

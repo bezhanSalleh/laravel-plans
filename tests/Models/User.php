@@ -1,8 +1,8 @@
 <?php
 
-namespace Qanoune\Plans\Test\Models;
+namespace BezhanSalleh\LaravelPlans\Test\Models;
 
-use Qanoune\Plans\Traits\HasPlans;
+use BezhanSalleh\LaravelPlans\Traits\HasPlans;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
 class User extends Authenticatable

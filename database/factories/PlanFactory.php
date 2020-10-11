@@ -10,7 +10,7 @@
 |
 */
 
-$factory->define(\Qanoune\Plans\Models\PlanModel::class, function () {
+$factory->define(\BezhanSalleh\LaravelPlans\Models\PlanModel::class, function () {
     return [
         'name' => 'Testing Plan '.str_random(7),
         'description' => 'This is a testing plan.',

@@ -1,16 +1,16 @@
 <?php
 
-namespace Qanoune\Plans\Test;
+namespace BezhanSalleh\LaravelPlans\Test;
 
 use Stripe\Stripe;
 use Stripe\Token as StripeToken;
-use Qanoune\Plans\Models\PlanModel;
-use Qanoune\Plans\Test\Models\User;
-use Qanoune\Plans\Models\PlanFeatureModel;
+use BezhanSalleh\LaravelPlans\Models\PlanModel;
+use BezhanSalleh\LaravelPlans\Test\Models\User;
+use BezhanSalleh\LaravelPlans\Models\PlanFeatureModel;
 use Orchestra\Testbench\TestCase as Orchestra;
-use Qanoune\Plans\Models\StripeCustomerModel;
-use Qanoune\Plans\Models\PlanSubscriptionModel;
-use Qanoune\Plans\Models\PlanSubscriptionUsageModel;
+use BezhanSalleh\LaravelPlans\Models\StripeCustomerModel;
+use BezhanSalleh\LaravelPlans\Models\PlanSubscriptionModel;
+use BezhanSalleh\LaravelPlans\Models\PlanSubscriptionUsageModel;
 
 abstract class TestCase extends Orchestra
 {
@@ -32,7 +32,7 @@ abstract class TestCase extends Orchestra
     protected function getPackageProviders($app)
     {
         return [
-            \Qanoune\Plans\PlansServiceProvider::class,
+            \BezhanSalleh\LaravelPlans\PlansServiceProvider::class,
         ];
     }
 

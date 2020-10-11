@@ -1,8 +1,8 @@
 <?php
 
-namespace Qanoune\Plans\Test;
+namespace BezhanSalleh\LaravelPlans\Test;
 
-use Qanoune\Plans\Models\PlanFeatureModel;
+use BezhanSalleh\LaravelPlans\Models\PlanFeatureModel;
 
 class FeatureTest extends TestCase
 {
@@ -13,8 +13,8 @@ class FeatureTest extends TestCase
     {
         parent::setUp();
 
-        $this->user = factory(\Qanoune\Plans\Test\Models\User::class)->create();
-        $this->plan = factory(\Qanoune\Plans\Models\PlanModel::class)->create();
+        $this->user = factory(\BezhanSalleh\LaravelPlans\Test\Models\User::class)->create();
+        $this->plan = factory(\BezhanSalleh\LaravelPlans\Models\PlanModel::class)->create();
     }
 
     public function testConsumeFeature()

@@ -8,12 +8,12 @@ return [
 
     'models' => [
 
-        'plan' => \Qanoune\Plans\Models\PlanModel::class,
-        'subscription' => \Qanoune\Plans\Models\PlanSubscriptionModel::class,
-        'feature' => \Qanoune\Plans\Models\PlanFeatureModel::class,
-        'usage' => \Qanoune\Plans\Models\PlanSubscriptionUsageModel::class,
+        'plan' => \BezhanSalleh\LaravelPlans\Models\PlanModel::class,
+        'subscription' => \BezhanSalleh\LaravelPlans\Models\PlanSubscriptionModel::class,
+        'feature' => \BezhanSalleh\LaravelPlans\Models\PlanFeatureModel::class,
+        'usage' => \BezhanSalleh\LaravelPlans\Models\PlanSubscriptionUsageModel::class,
 
-        'stripeCustomer' => \Qanoune\Plans\Models\StripeCustomerModel::class,
+        'stripeCustomer' => \BezhanSalleh\LaravelPlans\Models\StripeCustomerModel::class,
 
     ],
 

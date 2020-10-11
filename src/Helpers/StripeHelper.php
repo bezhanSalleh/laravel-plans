@@ -1,6 +1,6 @@
 <?php
 
-namespace Qanoune\Plans\Helpers;
+namespace BezhanSalleh\LaravelPlans\Helpers;
 
 class StripeHelper
 {

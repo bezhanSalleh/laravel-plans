@@ -1,6 +1,6 @@
 <?php
 
-namespace Qanoune\Plans\Events\Stripe;
+namespace BezhanSalleh\LaravelPlans\Events\Stripe;
 
 use Illuminate\Queue\SerializesModels;
 

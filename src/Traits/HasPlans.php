@@ -1,6 +1,6 @@
 <?php
 
-namespace Qanoune\Plans\Traits;
+namespace BezhanSalleh\LaravelPlans\Traits;
 
 use Carbon\Carbon;
 
@@ -189,13 +189,13 @@ trait HasPlans
                     'is_paid' => true,
                 ]);
 
-                event(new \Qanoune\Plans\Events\Stripe\ChargeSuccessful($this, $subscription, $stripeCharge));
+                event(new \BezhanSalleh\LaravelPlans\Events\Stripe\ChargeSuccessful($this, $subscription, $stripeCharge));
             } catch (\Exception $exception) {
-                event(new \Qanoune\Plans\Events\Stripe\ChargeFailed($this, $subscription, $exception));
+                event(new \BezhanSalleh\LaravelPlans\Events\Stripe\ChargeFailed($this, $subscription, $exception));
             }
         }
 
-        event(new \Qanoune\Plans\Events\NewSubscription($this, $subscription));
+        event(new \BezhanSalleh\LaravelPlans\Events\NewSubscription($this, $subscription));
 
         return $subscription;
     }
@@ -243,13 +243,13 @@ trait HasPlans
                     'is_paid' => true,
                 ]);
 
-                event(new \Qanoune\Plans\Events\Stripe\ChargeSuccessful($this, $subscription, $stripeCharge));
+                event(new \BezhanSalleh\LaravelPlans\Events\Stripe\ChargeSuccessful($this, $subscription, $stripeCharge));
             } catch (\Exception $exception) {
-                event(new \Qanoune\Plans\Events\Stripe\ChargeFailed($this, $subscription, $exception));
+                event(new \BezhanSalleh\LaravelPlans\Events\Stripe\ChargeFailed($this, $subscription, $exception));
             }
         }
 
-        event(new \Qanoune\Plans\Events\NewSubscriptionUntil($this, $subscription, $date));
+        event(new \BezhanSalleh\LaravelPlans\Events\NewSubscriptionUntil($this, $subscription, $date));
 
         return $subscription;
     }
@@ -285,7 +285,7 @@ trait HasPlans
             ]);
         }
 
-        event(new \Qanoune\Plans\Events\UpgradeSubscription($this, $subscription, $startFromNow, $oldPlan, $newPlan));
+        event(new \BezhanSalleh\LaravelPlans\Events\UpgradeSubscription($this, $subscription, $startFromNow, $oldPlan, $newPlan));
 
         return $subscription;
     }
@@ -329,7 +329,7 @@ trait HasPlans
             ]);
         }
 
-        event(new \Qanoune\Plans\Events\UpgradeSubscriptionUntil($this, $subscription, $date, $startFromNow, $oldPlan, $newPlan));
+        event(new \BezhanSalleh\LaravelPlans\Events\UpgradeSubscriptionUntil($this, $subscription, $date, $startFromNow, $oldPlan, $newPlan));
 
         return $subscription;
     }
@@ -366,7 +366,7 @@ trait HasPlans
                 'expires_on' => Carbon::parse($activeSubscription->expires_on)->addDays($duration),
             ]);
 
-            event(new \Qanoune\Plans\Events\ExtendSubscription($this, $activeSubscription, $startFromNow, null));
+            event(new \BezhanSalleh\LaravelPlans\Events\ExtendSubscription($this, $activeSubscription, $startFromNow, null));
 
             return $activeSubscription;
         }
@@ -383,7 +383,7 @@ trait HasPlans
             'recurring_each_days' => $duration,
         ]));
 
-        event(new \Qanoune\Plans\Events\ExtendSubscription($this, $activeSubscription, $startFromNow, $subscription));
+        event(new \BezhanSalleh\LaravelPlans\Events\ExtendSubscription($this, $activeSubscription, $startFromNow, $subscription));
 
         return $subscription;
     }
@@ -421,7 +421,7 @@ trait HasPlans
                 'expires_on' => $date,
             ]);
 
-            event(new \Qanoune\Plans\Events\ExtendSubscriptionUntil($this, $activeSubscription, $date, $startFromNow, null));
+            event(new \BezhanSalleh\LaravelPlans\Events\ExtendSubscriptionUntil($this, $activeSubscription, $date, $startFromNow, null));
 
             return $activeSubscription;
         }
@@ -442,7 +442,7 @@ trait HasPlans
             'recurring_each_days' => Carbon::now()->subSeconds(1)->diffInDays($date),
         ]));
 
-        event(new \Qanoune\Plans\Events\ExtendSubscriptionUntil($this, $activeSubscription, $date, $startFromNow, $subscription));
+        event(new \BezhanSalleh\LaravelPlans\Events\ExtendSubscriptionUntil($this, $activeSubscription, $date, $startFromNow, $subscription));
 
         return $subscription;
     }
@@ -469,7 +469,7 @@ trait HasPlans
             'is_recurring' => false,
         ]);
 
-        event(new \Qanoune\Plans\Events\CancelSubscription($this, $activeSubscription));
+        event(new \BezhanSalleh\LaravelPlans\Events\CancelSubscription($this, $activeSubscription));
 
         return $activeSubscription;
     }

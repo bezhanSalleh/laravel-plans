@@ -1,6 +1,6 @@
 <?php
 
-namespace Qanoune\Plans\Events;
+namespace BezhanSalleh\LaravelPlans\Events;
 
 use Illuminate\Queue\SerializesModels;
 

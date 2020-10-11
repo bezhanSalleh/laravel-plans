@@ -1,6 +1,6 @@
 <?php
 
-namespace Qanoune\Plans;
+namespace BezhanSalleh\LaravelPlans;
 
 use Illuminate\Support\ServiceProvider;
 

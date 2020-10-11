@@ -1,6 +1,6 @@
 <?php
 
-namespace Qanoune\Plans\Test;
+namespace BezhanSalleh\LaravelPlans\Test;
 
 use Carbon\Carbon;
 
@@ -14,9 +14,9 @@ class RecurrencyTest extends TestCase
     {
         parent::setUp();
 
-        $this->user = factory(\Qanoune\Plans\Test\Models\User::class)->create();
-        $this->plan = factory(\Qanoune\Plans\Models\PlanModel::class)->create();
-        $this->newPlan = factory(\Qanoune\Plans\Models\PlanModel::class)->create();
+        $this->user = factory(\BezhanSalleh\LaravelPlans\Test\Models\User::class)->create();
+        $this->plan = factory(\BezhanSalleh\LaravelPlans\Models\PlanModel::class)->create();
+        $this->newPlan = factory(\BezhanSalleh\LaravelPlans\Models\PlanModel::class)->create();
 
         $this->initiateStripeAPI();
     }

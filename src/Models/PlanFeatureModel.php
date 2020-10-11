@@ -1,6 +1,6 @@
 <?php
 
-namespace Qanoune\Plans\Models;
+namespace BezhanSalleh\LaravelPlans\Models;
 
 use Illuminate\Database\Eloquent\Model;
 

@@ -1,8 +1,8 @@
 <?php
 
-namespace Qanoune\Plans\Test;
+namespace BezhanSalleh\LaravelPlans\Test;
 
-use Qanoune\Plans\Helpers\StripeHelper;
+use BezhanSalleh\LaravelPlans\Helpers\StripeHelper;
 
 class StripeHelperTest extends TestCase
 {
