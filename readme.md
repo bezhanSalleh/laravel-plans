@@ -8,7 +8,7 @@
 
 [![PayPal](https://img.shields.io/badge/PayPal-donate-blue.svg)](https://paypal.me/Rennokki)
 
-# Laravel Plans
+# Laravel Plans - the following instructions are not updated yet!
 
 Laravel Plans is a package for SaaS apps that need management over plans, features, subscriptions, events for plans or limited, countable features.
 
@@ -25,7 +25,7 @@ While Laravel Cashier does this job really well, there are some features that ca
 Install the package:
 
 ```bash
-$ composer require Qanoune/plans
+$ composer require Qanoune/plans #laravel-plans is not setup yet on packagit.org
 ```
 
 If your Laravel version does not support package discovery, add this line in the `providers` array in your `config/app.php` file:
